@@ -26,16 +26,19 @@ body {
   transform: scale(0.98);
   transition: transform 0.5s;
 }
+.fixed-nav .site-wrap {
+  transform: scale(1.02);
+}
 
 header {
   text-align: center;
   height: 50vh;
-  background: url(https://source.unsplash.com/GKN6rpDr0EI/960x640) bottom center
-    no-repeat;
+  background: url(./turtle-bw-underwater.jpg) bottom center no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 90%;
 }
 
 h1 {
@@ -45,12 +48,17 @@ h1 {
 }
 
 nav {
-  background: black;
+  background: hsl(1, 2%, 50%);
   top: 0;
   width: 100%;
   transition: all 0.5s;
   position: relative;
   z-index: 1;
+}
+
+.fixed-nav nav {
+  position: fixed;
+  box-shadow: 0 5px hsl(0, 2%, 37%);
 }
 
 nav ul {
@@ -78,7 +86,11 @@ li.logo {
 }
 
 li.logo a {
-  color: black;
+  color: hsl(1, 2%, 50%);
+}
+
+.fixed-nav li.logo {
+  max-width: 500px;
 }
 
 nav a {
